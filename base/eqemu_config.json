@@ -29,13 +29,14 @@
           "port": "9001"
         },
         "telnet": {
-          "ip": "0.0.0.0",
+          "ip": "127.0.0.1",
           "port": "9000",
           "enabled": "true"
         },
-        "key": "aU08Qj72FJnViKqfsWXVZvsBCg6RYprD",
+        "key": "sdifojsoidfjsoidfjsiodj",
         "shortname": "test",
         "longname": "Test Snap Server",
+        "localaddress": "127.0.0.1",
         "loginserver3": {
           "account": "",
           "password": "",

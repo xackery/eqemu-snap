@@ -65,6 +65,7 @@ queryserv:
 # Start mariaDB standalone
 .PHONY: mariadb
 mariadb:
+	@chmod 600 build/bin/db/my.cnf
 	@-killall mariadbd
 	cd build/bin/db/${MARIADB_FOLDER}/bin && ./mysqld_safe --defaults-file=${PWD}/build/bin/db/my.cnf &
 
@@ -101,6 +102,7 @@ init-mariadb:
 	cd build/bin/db && tar -xf ${MARIADB_FOLDER}.tar.gz
 	cd build/bin/db && rm -rf ${MARIADB_FOLDER}.tar.gz
 	cp -R -u -p base/my.cnf build/bin/db/my.cnf
+	chmod 600 build/bin/db/my.cnf
 	cd build/bin/db/${MARIADB_FOLDER}/scripts && ./mariadb-install-db --defaults-file=${PWD}/build/bin/db/my.cnf --datadir=${PWD}/build/bin/db/data --basedir=${PWD}/build/bin/db/${MARIADB_FOLDER}
 	@#cd build/bin/db/${MARIADB_FOLDER}/bin && ./mysqld_safe --initialize-insecure --datadir=${PWD}/build/bin/db/data --defaults-file=${PWD}/build/bin/db/my.cnf
 	@echo "MariaDB is now initialized. Use 'make mariadb' to run it."
