@@ -1,0 +1,63 @@
+{
+    "server": {
+      "zones": {
+        "defaultstatus": "0",
+        "ports": {
+          "low": "7000",
+          "high": "7030"
+        }
+      },
+      "qsdatabase": {
+        "host": "127.0.0.1",
+        "port": "3306",
+        "username": "takp",
+        "password": "takppass",
+        "db": "takp"
+      },
+      "chatserver": {
+        "port": "7778",
+        "host": ""
+      },
+      "mailserver": {
+        "host": "",
+        "port": "7778"
+      },
+      "world": {
+        "locked": true,
+        "tcp": {
+          "ip": "0.0.0.0",
+          "port": "9001"
+        },
+        "telnet": {
+          "ip": "0.0.0.0",
+          "port": "9000",
+          "enabled": "true"
+        },
+        "key": "aU08Qj72FJnViKqfsWXVZvsBCg6RYprD",
+        "shortname": "test",
+        "longname": "Test Snap Server",
+        "loginserver3": {
+          "account": "",
+          "password": "",
+          "legacy": "0",
+          "host": "login.projecteq.net",
+          "port": "5998"
+        }
+      },
+      "database": {
+        "db": "takp",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "username": "takp",
+        "password": "takppass"
+      },
+      "files": {
+        "opcodes": "assets/opcodes/opcodes.conf",
+        "mail_opcodes": "assets/opcodes/mail_opcodes.conf"
+      },
+      "directories": {
+        "patches": "assets/patches/",
+        "opcodes": "assets/opcodes/"
+      }
+    }    
+  }
