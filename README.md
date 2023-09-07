@@ -19,7 +19,7 @@ Snaps a server over with a docker container
 - `make inject-mariadb`. This sets up a takp user and such. If you get an error "mysql not found", try running `sudo apt install mariadb-client`
 - `make prep` This will create a build subfolder, and copy files from base. This can be ran multiple times, files are checked prior to copying.
 - `make binaries` This will download the latest binaries for the server and client. This can be ran multiple times, files are checked prior to downloading.
-- `make source-mariadb` This will source the database with latest peq. May take a while. If you get an error `Can't locate JSON.pm` use `sudo apt install libjson-perl`
+- `make source-mariadb` This will source the database with latest peq. May take a while. If you get an error `Can't locate JSON.pm` use `sudo apt install libjson-perl`. You may also get `sh: 1: unzip: not found` during it, if so `sudo apt install unzip`
 
 - `make shared` Run shared memory. See if any errors
 - `make world` Start world. This will lock up the terminal, you can create a new one for additional processes.
