@@ -16,10 +16,10 @@ Snaps a server over with a docker container
 - We'll be using a standalone binary mysql install for dev purposes.
 - `make init-mariadb`. This will create build/bin/db and download/create a standalone copy of mariadb.
 - `make mariadb`. This will start a mysql server. May have to press enter to get prompt after it starts.
-- `make inject-mariadb`. This sets up a takp user and such
+- `make inject-mariadb`. This sets up a takp user and such. If you get an error "mysql not found", try running `sudo apt install mariadb-client`
 - `make prep` This will create a build subfolder, and copy files from base. This can be ran multiple times, files are checked prior to copying.
 - `make binaries` This will download the latest binaries for the server and client. This can be ran multiple times, files are checked prior to downloading.
-- `make source-mariadb` This will source the database with latest peq. May take a while.
+- `make source-mariadb` This will source the database with latest peq. May take a while. If you get an error `Can't locate JSON.pm` use `sudo apt install libjson-perl`
 
 - `make shared` Run shared memory. See if any errors
 - `make world` Start world. This will lock up the terminal, you can create a new one for additional processes.
